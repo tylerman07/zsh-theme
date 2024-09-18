@@ -2,7 +2,7 @@
 autoload -U colors && colors
 
 # ASCII art logo for Oxygen C2 with rainbow colors
-logo_art='
+logo_art="
 ${fg[magenta]}  ___                                 ${fg[red]}____ ${fg[cyan]}____  
 ${fg[magenta]} / _ \__  ___   _  __ _  ___ _ __    ${fg[blue]}/ ___|${fg[green]}___ \ 
 ${fg[magenta]}| | | \ \/ / | | |/ _` |/ _ \ '_ \  ${fg[yellow]}| |     ${fg[white]}__) |
@@ -10,7 +10,7 @@ ${fg[magenta]}| |_| |>  <| |_| | (_| |  __/ | | | ${fg[red]}| |___ ${fg[blue]}/ 
 ${fg[magenta]} \___//_/\_\\__, |\__, |\___|_| |_| ${fg[cyan]} \____|${fg[white]}_____| 
 ${fg[magenta]}           |___/ |___/                           
 ${reset_color}
-'
+"
 
 # Custom prompt
 PROMPT='
@@ -19,7 +19,11 @@ ${fg[magenta]}%~ ${fg[cyan]}%n@%m ${fg[blue]}%T ${reset_color}
 ${fg[green]}> ${reset_color}
 '
 
-# Optional: Add other customizations here
+# Optional: Set the cursor to a block
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(cursor)
+
+# Optional: Custom prompt separator
+# RPROMPT='${fg[magenta]}→'
 
 # Apply the custom prompt
 autoload -Uz promptinit && promptinit
