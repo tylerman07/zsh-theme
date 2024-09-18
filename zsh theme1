@@ -12,21 +12,15 @@ ${fg[magenta]}           |___/ |___/
 ${reset_color}
 "
 
-# Prompt customization
+# Custom prompt
 PROMPT='
 ${logo_art}
 ${fg[magenta]}%~ ${fg[cyan]}%n@%m ${fg[blue]}%T ${reset_color}
 ${fg[green]}> ${reset_color}
 '
 
-# Function to update the prompt
-update_prompt() {
-  PROMPT='%{$fg[magenta]%}%~ %{$fg[cyan]%}%n@%m %{$fg[blue]%}%T %{$reset_color%}
-%{$fg[green]%}> %{$reset_color%}'
-}
+# Optional: Add other customizations here
 
 # Apply the custom prompt
-update_prompt
-
-# Refresh the prompt
 autoload -Uz promptinit && promptinit
+PROMPT=$PROMPT
