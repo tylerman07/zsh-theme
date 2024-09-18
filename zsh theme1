@@ -1,0 +1,38 @@
+# Define colors
+autoload -U colors && colors
+
+# ASCII art skull for the prompt
+skull_art="
+${fg[red]}   _____
+${fg[red]}  /     \\
+${fg[red]} | () () |
+${fg[red]}  \  _  /
+${fg[red]}   |___|
+"
+
+# Prompt customization
+PROMPT='
+${skull_art}
+${fg[green]}%~ ${fg[yellow]}%n@%m ${fg[cyan]}%T ${reset_color}
+${fg[blue]}> ${reset_color}
+'
+
+# Optional: Set the cursor to a block
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(cursor)
+
+# Optional: Custom prompt separator
+# RPROMPT='${fg[magenta]}→'
+
+# Function to update the prompt
+update_prompt() {
+  PROMPT='%{$fg[green]%}%~ %{$fg[yellow]%}%n@%m %{$fg[cyan]%}%T %{$reset_color%}
+%{$fg[blue]%}> %{$reset_color%}'
+}
+
+# Apply the custom prompt
+update_prompt
+
+# Optional: Add other customizations here
+
+# Refresh the prompt
+autoload -Uz promptinit && promptinit
