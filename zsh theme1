@@ -6,9 +6,10 @@ logo_art="
 ${fg[magenta]}  ___                                 ${fg[red]}____ ${fg[cyan]}____  
 ${fg[magenta]} / _ \__  ___   _  __ _  ___ _ __    ${fg[blue]}/ ___|${fg[green]}___ \ 
 ${fg[magenta]}| | | \ \/ / | | |/ _` |/ _ \ '_ \  ${fg[yellow]}| |     ${fg[white]}__) |
-${fg[magenta]}| |_| |>  <| |_| | (_| |  __/ | | | ${fg[red]}| |___ ${fg[blue]} / __/ 
-${fg[magenta]} \___//_/\_\\__, |\__, |\___|_| |_| ${fg[cyan]} \____|${fg[white]}_____|
+${fg[magenta]}| |_| |>  <| |_| | (_| |  __/ | | | ${fg[red]}| |___ ${fg[blue]}/ __/ 
+${fg[magenta]} \___//_/\_\\__, |\__, |\___|_| |_| ${fg[cyan]} \____|${fg[white]}_____| 
 ${fg[magenta]}           |___/ |___/                           
+${reset_color}
 "
 
 # Prompt customization
@@ -37,4 +38,3 @@ update_prompt
 
 # Refresh the prompt
 autoload -Uz promptinit && promptinit
-
