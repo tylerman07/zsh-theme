@@ -19,12 +19,6 @@ ${fg[magenta]}%~ ${fg[cyan]}%n@%m ${fg[blue]}%T ${reset_color}
 ${fg[green]}> ${reset_color}
 '
 
-# Optional: Set the cursor to a block
-# ZSH_HIGHLIGHT_HIGHLIGHTERS=(cursor)
-
-# Optional: Custom prompt separator
-# RPROMPT='${fg[magenta]}→'
-
 # Function to update the prompt
 update_prompt() {
   PROMPT='%{$fg[magenta]%}%~ %{$fg[cyan]%}%n@%m %{$fg[blue]%}%T %{$reset_color%}
@@ -33,8 +27,6 @@ update_prompt() {
 
 # Apply the custom prompt
 update_prompt
-
-# Optional: Add other customizations here
 
 # Refresh the prompt
 autoload -Uz promptinit && promptinit
