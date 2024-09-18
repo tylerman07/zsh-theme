@@ -13,11 +13,11 @@ ${reset_color}
 "
 
 # Custom prompt
-PROMPT='
+PROMPT="
 ${logo_art}
 ${fg[magenta]}%~ ${fg[cyan]}%n@%m ${fg[blue]}%T ${reset_color}
 ${fg[green]}> ${reset_color}
-'
+"
 
 # Optional: Add other customizations here
 
