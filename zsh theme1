@@ -1,20 +1,21 @@
 # Define colors
 autoload -U colors && colors
 
-# ASCII art skull for the prompt
-skull_art="
-${fg[red]}   _____
-${fg[red]}  /     \\
-${fg[red]} | () () |
-${fg[red]}  \  _  /
-${fg[red]}   |___|
+# ASCII art logo for Oxygen C2 with rainbow colors
+logo_art="
+${fg[magenta]}  ___                                 ${fg[red]}____ ${fg[cyan]}____  
+${fg[magenta]} / _ \__  ___   _  __ _  ___ _ __    ${fg[blue]}/ ___|${fg[green]}___ \ 
+${fg[magenta]}| | | \ \/ / | | |/ _` |/ _ \ '_ \  ${fg[yellow]}| |     ${fg[white]}__) |
+${fg[magenta]}| |_| |>  <| |_| | (_| |  __/ | | | ${fg[red]}| |___ ${fg[blue]} / __/ 
+${fg[magenta]} \___//_/\_\\__, |\__, |\___|_| |_| ${fg[cyan]} \____|${fg[white]}_____|
+${fg[magenta]}           |___/ |___/                           
 "
 
 # Prompt customization
 PROMPT='
-${skull_art}
-${fg[green]}%~ ${fg[yellow]}%n@%m ${fg[cyan]}%T ${reset_color}
-${fg[blue]}> ${reset_color}
+${logo_art}
+${fg[magenta]}%~ ${fg[cyan]}%n@%m ${fg[blue]}%T ${reset_color}
+${fg[green]}> ${reset_color}
 '
 
 # Optional: Set the cursor to a block
@@ -25,8 +26,8 @@ ${fg[blue]}> ${reset_color}
 
 # Function to update the prompt
 update_prompt() {
-  PROMPT='%{$fg[green]%}%~ %{$fg[yellow]%}%n@%m %{$fg[cyan]%}%T %{$reset_color%}
-%{$fg[blue]%}> %{$reset_color%}'
+  PROMPT='%{$fg[magenta]%}%~ %{$fg[cyan]%}%n@%m %{$fg[blue]%}%T %{$reset_color%}
+%{$fg[green]%}> %{$reset_color%}'
 }
 
 # Apply the custom prompt
@@ -36,3 +37,4 @@ update_prompt
 
 # Refresh the prompt
 autoload -Uz promptinit && promptinit
+
